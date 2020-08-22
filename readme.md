@@ -1,6 +1,1 @@
-Very basic typescript lib starter 
-
-- tslint
-- jest 
-- version bump
-  
+Simple package to handle ISO8601 Date (YYYY-MM-DD) calculation and conversion. This
