@@ -1,7 +1,11 @@
 {
 	"name": "iso8601-fns",
-	"version": "1.0.1",
-	"main": "index.js",
+	"version": "1.0.2",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/**/*"
+	],
 	"license": "MIT",
 	"devDependencies": {
 		"@types/jest": "^25.1.4",
