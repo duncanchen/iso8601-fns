@@ -1,1 +1,1 @@
-Simple package to handle ISO8601 Date (YYYY-MM-DD) calculation and conversion. This
+Simple package to handle ISO8601 Date (YYYY-MM-DD) calculation and conversion. 
