@@ -1,0 +1,49 @@
+{
+	"name": "iso8601-fns",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^25.1.4",
+		"@types/node": "^13.9.0",
+		"husky": "^4.2.3",
+		"jest": "^25.1.0",
+		"trash-cli": "^3.0.0",
+		"ts-jest": "^25.2.1",
+		"tslint": "^6.0.0",
+		"typescript": "^3.8.3",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-immutable": "^6.0.1",
+		"minimist": "^1.2.3"
+	},
+	"scripts": {
+		"build": "trash dist && tsc",
+		"build:watch": "tsc -w",
+		"x-prepare": "npm run build",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:mac": "node --inspect node_modules/.bin/jest --watch --runInBand",
+		"test:win": "node --inspect node_modules/jest/bin/jest.js --watch --runInBand"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm --no-git-tag-version version patch && git add package.json"
+		}
+	},
+	"dependencies": {
+		"loglevel": "^1.6.7",
+		"date-fns": "^2.15.0"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"ts",
+			"js"
+		],
+		"transform": {
+			"^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+		},
+		"testMatch": [
+			"**/*.test.ts"
+		]
+	}
+}
